@@ -5,10 +5,12 @@ class RegExpCard extends StatelessWidget {
     super.key,
     required this.title,
     required this.delete,
+    required this.edit,
   });
 
   final String? title;
   final void Function() delete;
+  final void Function() edit;
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +34,26 @@ class RegExpCard extends StatelessWidget {
               ),
             ),
           ),
-          trailing: IconButton(
-            onPressed: delete,
-            icon: const Icon(
-              Icons.delete,
-              color: Colors.grey,
-              size: 30,
-            ),
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              IconButton(
+                onPressed: edit,
+                icon: const Icon(
+                  Icons.edit,
+                  color: Colors.grey,
+                  size: 30,
+                ),
+              ),
+              IconButton(
+                onPressed: delete,
+                icon: const Icon(
+                  Icons.delete,
+                  color: Colors.grey,
+                  size: 30,
+                ),
+              ),
+            ],
           ),
         ),
       ),

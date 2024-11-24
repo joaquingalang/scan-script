@@ -32,6 +32,28 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  void _editRegExp(int index, String regExp) {
+    setState(() {
+      regExpList[index] = regExp;
+    });
+  }
+
+  void _editInterface(int index) {
+    showModalBottomSheet(
+      isScrollControlled: true,
+      context: context,
+      builder: (context) => Padding(
+        padding: EdgeInsets.only(
+            bottom: MediaQuery.of(context).viewInsets.bottom),
+        child: EditRegExpInterface(
+          index: index,
+          regExp: regExpList[index],
+          action: _editRegExp,
+        ),
+      ),
+    );
+  }
+
   void _displayBody(List<String> body) {
     for (String line in body) {
       print(line);
@@ -144,6 +166,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           delete: () {
                             _deleteRegExp(index);
                           },
+                          edit: (){
+                            _editInterface(index);
+                          },
                         );
                       },
                     ),
@@ -177,6 +202,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                   List<String>? body =
                       await ocrScanner.pickImage(ImageSource.camera);
+                  // if (body == null) Navigator.pop(context);
                   _displayBody(body!);
                   Navigator.pop(context);
                   Navigator.push(
