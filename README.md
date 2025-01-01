@@ -1,7 +1,7 @@
 # ScanScript
 ScanScript is a mobile application developed with Dart and Flutter that functions as an OCR regular expression scanner. This application was developed as my final project in compliance with our Automata and Finite Languages subject. 
 
-## How to Use 🔍
+## How To Use 🔍
 **Step 1:** After opening ScanScript, you should land in the Home Screen.
 <br>
 <img height="250" src="https://github.com/user-attachments/assets/73ebdcd1-f29d-457a-a5b7-43e0a744f881">
