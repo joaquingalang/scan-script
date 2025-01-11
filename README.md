@@ -10,7 +10,7 @@ ScanScript is a mobile application developed with Dart and Flutter that function
 <br>
 <img height="250" src="https://github.com/user-attachments/assets/c32b3c5a-6b14-4530-920c-0d2039e3931b"> <img height="250" src="https://github.com/user-attachments/assets/8f79a6f4-eb4c-4c24-bf5c-1081de3509ec">
 <br>
-**Step 3:** Next, select an image to scan either by through snapping an image with the **Camera** or choosing from the **Gallery**. 
+**Step 3:** Next, select an image to scan either by snapping an image with the **Camera** or choosing from the **Gallery**. 
 <br>
 <img height="250" src="https://github.com/user-attachments/assets/d25efdb0-b22b-4ac5-9c73-160fbb631a63">
 <br>
